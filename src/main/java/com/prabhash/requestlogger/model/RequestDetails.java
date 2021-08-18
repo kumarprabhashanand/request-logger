@@ -1,22 +1,22 @@
 package com.prabhash.requestlogger.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.Map;
 
 @Getter
 @Setter
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 public class RequestDetails {
 
-    private Map<String, String> headers;
+    private Map<String, String> requestHeaders;
 
-    private String requestUrl;
+    private String requestUri;
 
     private String requestBody;
+
+    private String requestMethod;
 
 }
